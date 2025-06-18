@@ -1,6 +1,21 @@
 const btn = document.getElementById('btn');
-const text = document.getElementById('text').innerText;
 
-btn.addEventListener('click', () => {
-    document.getElementById('text').innerText = 'ボタンをクリックしました';
+//今回は、この課題でつまづきました。
+//教材の中でHTMLに要素を追加するという例はあったのですが、
+//書き換えるにはどうすればよいのだろうかと詰まってしまいました。
+//最終的にはインターネットで調べて課題は合格したもののAI先生だったから引っかからなかったといった形でした。
+//innerTextというものを使いましたが、後で調べてみると邪道のようでした。
+
+//そもそもイメージとしては、HTMLそのものを書き換えず、表示だけ変えるという概念が新鮮だったというか、不思議に思いました。
+//プログラミング初心者としては、printとか、consoleといった出力するスクリプトを入れないと変化が起きないようなイメージがあり、
+//textという変数に「.~~~」と後ろに続けて書くだけで、変数内容を変更して、書き換えや変更やHTMLの表示までいろいろできるといった概念はプログラミングではよくあるのでしょうか？
+//質問になっているのかわからなくなって来ましたが、その辺のお話を先生なりに頂けたらありがたいです。
+
+const text = document.getElementById('text');
+
+btn.addEventListener('click', () => {    
+    //自分の解答
+    //document.getElementById('text').innerText = 'ボタンをクリックしました';
+    //正しい解答
+    text.textContent = "ボタンをクリックしました";
 })
